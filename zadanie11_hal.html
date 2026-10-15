@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 11 - Halyna</title>
+</head>
+<body>
+<div style="color:green;font-size:50px;">
+<script language="JavaScript">
+// Ivan Halyna 3F 15.10.2026
+// Zadanie 11
+var D1_hal=prompt("D1=","");
+var D2_hal=prompt("D2=","");
+var sekund;
+var a=parseFloat(D1_hal);
+var b=parseFloat(D2_hal);
+sekund=(a-b)*24*60*60;
+document.write("Ilość sekund między dniami "+a+" i "+b+" = "+sekund+"<br>");
+function okno_zamknij_halyna()
+{
+  window.close()
+}
+</script>
+</div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_halyna()"/>
+</body>
+</html>

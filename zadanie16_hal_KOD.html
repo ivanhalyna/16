@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zadanie 16 - KOD - Halyna</title>
+</head>
+<body>
+<textarea cols="92" rows="42">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 16 - Halyna</title>
+</head>
+<body style="margin:0;">
+<div id="wynik_hal" style="color:navy;white-space:nowrap;font-size:20px;">
+<script language="JavaScript">
+// Ivan Halyna 3F 15.10.2026
+// Zadanie 16
+var A_hal=prompt("Podaj pierwszą liczbę\nA=","");
+var B_hal=prompt("Podaj drugą liczbę\nB=","");
+var A=parseInt(A_hal);
+var B=parseInt(B_hal);
+var suma=A*A*A+3*A*A*B+3*A*B*B+B*B*B;
+document.write("wczytane liczby: &amp;nbsp;&amp;nbsp;A="+A+"&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;B="+B+"<br>");
+var linia2="("+A+" + "+B+")^3= "+A+"^3 + 3*(("+A+")^2)*("+B+") + ";
+linia2=linia2+"3*("+A+")*(("+B+")^2) + "+B+"^3 = ";
+linia2=linia2+A*A*A+" + "+3*A*A*B+" + "+3*A*B*B+" + "+B*B*B+" = "+suma;
+document.write("<span id='linia2_hal'>"+linia2+"</span>");
+</script>
+</div>
+<script language="JavaScript">
+// wielkość liter dobrana tak, aby druga linia zajmowała całą szerokość okna
+var wynik=document.getElementById("wynik_hal");
+var linia=document.getElementById("linia2_hal");
+var rozmiar=20;
+for (var i=0; i<3; i++)
+{
+  rozmiar=rozmiar*0.99*document.body.clientWidth/linia.getBoundingClientRect().width;
+  wynik.style.fontSize=rozmiar+"px";
+}
+function okno_zamknij_halyna()
+{
+  window.close()
+}
+</script>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_halyna()"/>
+</body>
+</html>
+</textarea>
+<br>
+<input type="button" value="zamknij okno" onclick="window.close()" />
+</body>
+</html>
